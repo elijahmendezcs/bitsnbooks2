@@ -5,9 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const books = [
-  { title: "Deep Learning Essentials", image: "https://via.placeholder.com/200x300" },
-  { title: "React & Beyond", image: "https://via.placeholder.com/200x300" },
-  { title: "Cyberpunk Reads", image: "https://via.placeholder.com/200x300" },
+  { title: "Deep Learning Essentials", image: "/images/deeplearning.webp" },
+  { title: "React & Beyond", image: "/images/react.png" },
+  { title: "Cyberpunk Reads", image: "/images/cyberpunk.jpeg" },
 ];
 
 const NewArrivalsCarousel = () => {
