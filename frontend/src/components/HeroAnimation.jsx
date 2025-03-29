@@ -10,7 +10,7 @@ const HeroAnimation = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       sx={{
-        background: 'linear-gradient(135deg, #1a1a1a, #333)',
+        background: "linear-gradient(135deg, #1a1a1a, #333)",
         color: "#fff",
         py: 8,
         textAlign: "center",

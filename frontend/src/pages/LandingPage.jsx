@@ -14,9 +14,6 @@ import StatsSection from "../components/StatsSection";
 function LandingPage() {
   return (
     <div style={{ position: "relative", overflow: "hidden" }}>
-      {/* Navbar (always at the top) */}
-
-      {/* Particle Background (z-index -1 to keep it behind content) */}
       <Box
         sx={{
           position: "absolute",
@@ -30,16 +27,12 @@ function LandingPage() {
         <ParticleBackground />
       </Box>
 
-      {/* Animated Hero Section */}
       <HeroAnimation />
 
-      {/* Category Section (e.g., Tech, Programming, Fiction) */}
       <CategorySection />
 
-      {/* New Arrivals Carousel */}
       <NewArrivalsCarousel />
 
-      {/* Featured Books Section */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Typography
           variant="h4"
@@ -70,10 +63,8 @@ function LandingPage() {
         </Box>
       </Container>
 
-      {/* Stats Section (optional) */}
       <StatsSection />
 
-      {/* Footer */}
       <Box sx={{ backgroundColor: "#1a1a1a", color: "#fff", py: 4 }}>
         <Container maxWidth="lg">
           <Typography variant="body2" sx={{ textAlign: "center" }}>

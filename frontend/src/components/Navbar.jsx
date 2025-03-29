@@ -1,17 +1,17 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 
-const pages = ['Home', 'Catalog', 'About'];
+const pages = ["Home", "Catalog", "About"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -25,23 +25,23 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar 
+    <AppBar
       position="static"
-      sx={{ 
-        backgroundColor: '#1a1a1a', // Dark background for a modern look
-        boxShadow: 'none'
+      sx={{
+        backgroundColor: "#1a1a1a",
+        boxShadow: "none",
       }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Desktop Logo */}
-          <MenuBookIcon 
-            sx={{ 
-              display: { xs: 'none', md: 'flex' }, 
-              mr: 1, 
-              color: '#f39c12', 
-              fontSize: 40 
-            }} 
+          <MenuBookIcon
+            sx={{
+              display: { xs: "none", md: "flex" },
+              mr: 1,
+              color: "#f39c12",
+              fontSize: 40,
+            }}
           />
           <Typography
             variant="h6"
@@ -50,19 +50,18 @@ function ResponsiveAppBar() {
             href="#"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'Roboto Mono, monospace',
+              display: { xs: "none", md: "flex" },
+              fontFamily: "Roboto Mono, monospace",
               fontWeight: 700,
-              letterSpacing: '.2rem',
-              color: '#f39c12',
-              textDecoration: 'none',
+              letterSpacing: ".2rem",
+              color: "#f39c12",
+              textDecoration: "none",
             }}
           >
             BITS & BOOKS
           </Typography>
 
-          {/* Mobile Menu Icon and Logo */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="open navigation menu"
@@ -71,36 +70,36 @@ function ResponsiveAppBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon sx={{ color: '#f39c12' }} />
+              <MenuIcon sx={{ color: "#f39c12" }} />
             </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
-                '& .MuiPaper-root': {
-                  backgroundColor: '#2c2c2c',
+                display: { xs: "block", md: "none" },
+                "& .MuiPaper-root": {
+                  backgroundColor: "#2c2c2c",
                 },
               }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography 
+                  <Typography
                     textAlign="center"
                     sx={{
-                      color: '#f39c12',
-                      fontFamily: 'Roboto Mono, monospace'
+                      color: "#f39c12",
+                      fontFamily: "Roboto Mono, monospace",
                     }}
                   >
                     {page}
@@ -109,13 +108,13 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <MenuBookIcon 
-            sx={{ 
-              display: { xs: 'flex', md: 'none' }, 
-              mr: 1, 
-              color: '#f39c12', 
-              fontSize: 32 
-            }} 
+          <MenuBookIcon
+            sx={{
+              display: { xs: "flex", md: "none" },
+              mr: 1,
+              color: "#f39c12",
+              fontSize: 32,
+            }}
           />
           <Typography
             variant="h5"
@@ -124,32 +123,32 @@ function ResponsiveAppBar() {
             href="#"
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
+              display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: 'Roboto Mono, monospace',
+              fontFamily: "Roboto Mono, monospace",
               fontWeight: 700,
-              letterSpacing: '.1rem',
-              color: '#f39c12',
-              textDecoration: 'none',
+              letterSpacing: ".1rem",
+              color: "#f39c12",
+              textDecoration: "none",
             }}
           >
             BITS & BOOKS
           </Typography>
 
           {/* Desktop Navigation Links */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
-                  color: '#ffffff',
-                  display: 'block',
-                  fontFamily: 'Roboto Mono, monospace',
+                  color: "#ffffff",
+                  display: "block",
+                  fontFamily: "Roboto Mono, monospace",
                   fontWeight: 500,
-                  '&:hover': {
-                    backgroundColor: '#333333',
+                  "&:hover": {
+                    backgroundColor: "#333333",
                   },
                 }}
               >

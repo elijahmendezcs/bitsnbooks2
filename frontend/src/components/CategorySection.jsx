@@ -15,7 +15,11 @@ const CategorySection = () => {
     <Box sx={{ py: 8 }}>
       <Typography
         variant="h4"
-        sx={{ textAlign: "center", fontFamily: "Roboto Mono, monospace", mb: 4 }}
+        sx={{
+          textAlign: "center",
+          fontFamily: "Roboto Mono, monospace",
+          mb: 4,
+        }}
       >
         Explore by Category
       </Typography>
