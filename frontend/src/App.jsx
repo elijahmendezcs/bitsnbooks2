@@ -9,7 +9,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        {/* Add more routes here if needed */}
       </Routes>
     </Router>
   );
