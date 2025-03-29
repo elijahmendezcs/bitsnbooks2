@@ -2,74 +2,42 @@ import * as React from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
+
+// Custom Components
+import Navbar from "../components/Navbar";
+import ParticleBackground from "../components/ParticleBackground";
+import HeroAnimation from "../components/HeroAnimation";
+import CategorySection from "../components/CategorySection";
+import NewArrivalsCarousel from "../components/NewArrivalsCarousel";
+import StatsSection from "../components/StatsSection";
 
 function LandingPage() {
   return (
-    <div>
-      {/* Hero Section */}
+    <div style={{ position: "relative", overflow: "hidden" }}>
+      {/* Navbar (always at the top) */}
+
+      {/* Particle Background (z-index -1 to keep it behind content) */}
       <Box
         sx={{
-          background: "linear-gradient(135deg, #1a1a1a 0%, #333 100%)",
-          color: "#fff",
-          py: 8,
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: -1,
         }}
       >
-        <Container maxWidth="md" sx={{ textAlign: "center" }}>
-          <Typography
-            variant="h3"
-            component="h1"
-            gutterBottom
-            sx={{
-              fontFamily: "Roboto Mono, monospace",
-              fontWeight: 700,
-            }}
-          >
-            Welcome to Bits & Books
-          </Typography>
-          <Typography
-            variant="h6"
-            component="p"
-            gutterBottom
-            sx={{
-              fontFamily: "Roboto Mono, monospace",
-              mb: 4,
-            }}
-          >
-            Where technology meets literature.
-          </Typography>
-          <Box
-            component="form"
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              gap: 2,
-              mb: 6,
-            }}
-          >
-            <TextField
-              variant="outlined"
-              placeholder="Search for books..."
-              sx={{
-                backgroundColor: "#fff",
-                borderRadius: 1,
-                width: "70%",
-              }}
-            />
-            <Button
-              variant="contained"
-              sx={{
-                backgroundColor: "#f39c12",
-                color: "#fff",
-                fontFamily: "Roboto Mono, monospace",
-              }}
-            >
-              Search
-            </Button>
-          </Box>
-        </Container>
+        <ParticleBackground />
       </Box>
+
+      {/* Animated Hero Section */}
+      <HeroAnimation />
+
+      {/* Category Section (e.g., Tech, Programming, Fiction) */}
+      <CategorySection />
+
+      {/* New Arrivals Carousel */}
+      <NewArrivalsCarousel />
 
       {/* Featured Books Section */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
@@ -81,6 +49,7 @@ function LandingPage() {
             fontFamily: "Roboto Mono, monospace",
             fontWeight: 700,
             textAlign: "center",
+            mb: 4,
           }}
         >
           Featured Books
@@ -94,15 +63,24 @@ function LandingPage() {
         >
           Discover our curated selection of tech and literature favorites.
         </Typography>
-        {/* Placeholder: Replace this box with a grid or card layout later */}
         <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Typography variant="body2" color="textSecondary">
+          <Typography variant="body2" color="text.secondary">
             (Featured books will be displayed here)
           </Typography>
         </Box>
       </Container>
 
+      {/* Stats Section (optional) */}
+      <StatsSection />
+
       {/* Footer */}
+      <Box sx={{ backgroundColor: "#1a1a1a", color: "#fff", py: 4 }}>
+        <Container maxWidth="lg">
+          <Typography variant="body2" sx={{ textAlign: "center" }}>
+            © {new Date().getFullYear()} Bits & Books. All rights reserved.
+          </Typography>
+        </Container>
+      </Box>
     </div>
   );
 }

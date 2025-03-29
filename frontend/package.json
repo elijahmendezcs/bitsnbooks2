@@ -17,10 +17,16 @@
     "@mui/material": "^7.0.1",
     "@mui/styled-engine-sc": "^7.0.1",
     "@tailwindcss/vite": "^4.0.17",
+    "framer-motion": "^12.6.2",
     "react": "^19.0.0",
+    "react-awesome-reveal": "^4.3.1",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.1",
-    "styled-components": "^6.1.16"
+    "react-slick": "^0.30.3",
+    "react-tsparticles": "^2.12.2",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.16",
+    "tsparticles": "^3.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
