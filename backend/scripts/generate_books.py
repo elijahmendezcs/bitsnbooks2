@@ -4,7 +4,7 @@ import random
 from datetime import datetime
 
 # Config
-DB_PATH = "BitsAndBooks.sqlite"  # Change if your DB file is in another location
+DB_PATH = "../BitsAndBooks.sqlite" # Change if your DB file is in another location
 NUM_BOOKS = 10000                # Change this to scale up (e.g. 1000000)
 BATCH_SIZE = 1000
 
