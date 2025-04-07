@@ -5,8 +5,8 @@ from datetime import datetime
 
 # Config
 DB_PATH = "../BitsAndBooks.sqlite"
-NUM_BOOKS = 15_000_000           # Total number of books to insert.
-BATCH_SIZE = 1_000_000              # Number of books to insert per transaction
+NUM_BOOKS = 1000           # Total number of books to insert.
+BATCH_SIZE = 100              # Number of books to insert per transaction
 
 # Faker setup
 faker = Faker()

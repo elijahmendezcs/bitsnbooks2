@@ -32,7 +32,7 @@ CREATE TABLE authors (
                          first_name TEXT NOT NULL,
                          last_name TEXT NOT NULL,
                          bio TEXT,
-                         CONSTRAINT unique_author_name UNIQUE (first_name, last_name)
+                         CONSTRAINT unique_author_name UNIQUE (first_name, last_name) -- fix this later, authors cannot have the same and first and last name, but some people do have the same first and last name
 );
 
 -- Books Table
