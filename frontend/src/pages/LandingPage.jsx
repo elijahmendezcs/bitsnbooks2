@@ -51,8 +51,6 @@ function LandingPage() {
       </Box>
 
       <HeroAnimation />
-      <CategorySection />
-      <NewArrivalsCarousel />
 
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Typography
@@ -92,7 +90,10 @@ function LandingPage() {
 
         {/* Search Results */}
         {results.length > 0 && (
-          <Paper elevation={3} sx={{ backgroundColor: "#2c2c2c", color: "#fff" }}>
+          <Paper
+            elevation={3}
+            sx={{ backgroundColor: "#2c2c2c", color: "#fff" }}
+          >
             <Typography variant="h6" sx={{ px: 2, pt: 2 }}>
               Search Results:
             </Typography>
@@ -107,9 +108,13 @@ function LandingPage() {
               <TableBody>
                 {results.map((book, index) => (
                   <TableRow key={`${book.book_id}-${index}`}>
-                    <TableCell sx={{ color: "#fff" }}>{book.book_title}</TableCell>
+                    <TableCell sx={{ color: "#fff" }}>
+                      {book.book_title}
+                    </TableCell>
                     <TableCell sx={{ color: "#fff" }}>{book.isbn}</TableCell>
-                    <TableCell sx={{ color: "#fff" }}>{book.author_name}</TableCell>
+                    <TableCell sx={{ color: "#fff" }}>
+                      {book.author_name}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>

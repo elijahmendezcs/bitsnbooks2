@@ -33,26 +33,6 @@ const HeroAnimation = () => {
         >
           Where technology meets literature.
         </Typography>
-        <Box
-          component="form"
-          sx={{ display: "flex", justifyContent: "center", gap: 2, mb: 6 }}
-        >
-          <TextField
-            variant="outlined"
-            placeholder="Search for books..."
-            sx={{ backgroundColor: "#fff", borderRadius: 1, width: "70%" }}
-          />
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#f39c12",
-              color: "#fff",
-              fontFamily: "Roboto Mono, monospace",
-            }}
-          >
-            Search
-          </Button>
-        </Box>
       </Container>
     </Box>
   );
