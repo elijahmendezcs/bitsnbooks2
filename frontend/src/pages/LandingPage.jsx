@@ -102,16 +102,14 @@ function LandingPage() {
                   <TableCell sx={{ color: "#fff" }}>Title</TableCell>
                   <TableCell sx={{ color: "#fff" }}>ISBN</TableCell>
                   <TableCell sx={{ color: "#fff" }}>Author</TableCell>
-                  <TableCell sx={{ color: "#fff" }}>Publisher</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 {results.map((book, index) => (
                   <TableRow key={`${book.book_id}-${index}`}>
-                    <TableCell sx={{ color: "#fff" }}>{book.title}</TableCell>
+                    <TableCell sx={{ color: "#fff" }}>{book.book_title}</TableCell>
                     <TableCell sx={{ color: "#fff" }}>{book.isbn}</TableCell>
                     <TableCell sx={{ color: "#fff" }}>{book.author_name}</TableCell>
-                    <TableCell sx={{ color: "#fff" }}>{book.publisher_name}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
