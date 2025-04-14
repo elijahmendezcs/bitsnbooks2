@@ -131,12 +131,12 @@ function LandingPage() {
         )}
       </Container>
 
-      <StatsSection />
-
       <Box sx={{ backgroundColor: "#1a1a1a", color: "#fff", py: 4 }}>
         <Container maxWidth="lg">
           <Typography variant="body2" sx={{ textAlign: "center" }}>
             © {new Date().getFullYear()} Bits & Books. All rights reserved.
+            Built by Elijah Mendez, Mohamed Chakrowf, Felix Bogart, and Alec
+            Wang
           </Typography>
         </Container>
       </Box>
