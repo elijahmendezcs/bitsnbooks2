@@ -1,7 +1,12 @@
-INSERT INTO Authors (first_name, last_name, bio)
+INSERT INTO Authors (author_id, first_name, last_name, bio)
 VALUES
-    ('Jane', 'Smith', 'Award-winning science fiction writer known for her intergalactic thrillers.'),
-    ('John', 'Doe', 'Writes beginner-friendly tech and programming books with clarity.'),
-    ('Alice', 'Nguyen', 'Focuses on data visualization and storytelling through charts and dashboards.'),
-    ('Carlos', 'Reyes', 'Historian turned author, specializing in historical fiction and academic writing.'),
-    ('Priya', 'Patel', 'Renowned for modern poetry and short philosophical essays.');
+    ('1101', 'Elijah', 'Mendez', 'Award-winning science fiction writer known for her intergalactic thrillers.')
+    ;
+INSERT INTO Books (book_id, title, isbn, publisher_id, publication_date, price, stock)
+VALUES 
+    ('9780143127550', 'Sapiens', 'Yuval Noah Harari', 'Harper', 2015, 18.99, 50)
+    ;
+INSERT INTO Publishers (publisher_id, name, address, phone, email)
+VALUES 
+    ('101', 'Mohamed Chakrowf', '5221 Bonner Dr.', '999-999-9999', 'pub101@gmail.com')
+    ;
